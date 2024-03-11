@@ -1,6 +1,6 @@
 {
-  "name": "dev-web-blog",
-  "version": "0.1.0",
+  "name": "tailwind-nextjs-starter-blog",
+  "version": "2.1.0",
   "private": true,
   "scripts": {
     "start": "next dev",
