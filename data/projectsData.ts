@@ -10,7 +10,7 @@ const projectsData: Project[] = [
     title: 'Blog',
     description: 'Web Development Blog',
     //imgSrc: '/static/images/google.png',
-    //href: 'https://www.google.com',
+    href: 'https://www.devweb.blog/',
   },
 ]
 

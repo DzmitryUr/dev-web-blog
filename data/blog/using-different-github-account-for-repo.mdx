@@ -1,0 +1,40 @@
+---
+title: 'Using a different GitHub account for a repository'
+date: '2024-03-15'
+tags: ['github', 'settings']
+draft: true
+summary: Using different GitHub accounts.
+---
+
+The first challenge I faced when started the blog is how to use my personal GitHub account for the blog's repository.
+
+1. **Configure Your Git Username and Email Globally**:
+   If you haven't already done so, you can configure your global Git settings with the username and email of the account you want to use. Open a terminal and use the following commands, replacing "your_username" and "your_email@example.com" with your GitHub account details:
+
+   ```bash
+   git config --global user.name "your_username"
+   git config --global user.email "your_email@example.com"
+   ```
+
+2. **Clone the Repository**:
+    Clone the repository you want to contribute to using the following command:   
+
+    ```bash
+    git clone <repository_URL>
+    ```
+
+3. **Change Directory to the Cloned Repository**:
+   Navigate into the directory of the cloned repository using the cd command:
+
+   ```bash
+   cd <repository_name>
+   ```
+
+4. **Configure User Locally for the Repository**:
+   Inside the repository directory, configure your local Git settings with the username and email associated with the alternate GitHub account:   
+
+   ```bash
+    git config user.name "personal_username"
+    git config user.email "personal_email@example.com"
+
+
