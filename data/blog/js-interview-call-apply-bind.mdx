@@ -1,0 +1,65 @@
+---
+title: 'Functions Call, Apply, and Bind in JavaScript'
+date: '2024-03-17'
+tags: ['interview', 'javascript', 'core-js']
+draft: false
+summary: What is the difference between Call, Apply, and Bind functions in JavaScript? Can you explain Call, Apply, and Bind methods? Answering these interview questions.
+---
+
+## Short answer to question about Call, Apply, and Bind functions in JavaScript
+
+- **Call**: Invokes a function with a specific context and individual arguments.
+- **Apply**: Invokes a function with a specific context and arguments provided as an array.
+- **Bind**: Creates a new function with a specified context and optionally pre-filled arguments, without immediately invoking it.
+
+## Explanation of Call, Apply, and Bind functions in JavaScript
+
+### The call() Method
+
+The `call()` method invokes a function with a specified this value and individual arguments provided explicitly. It allows developers to set the context (this value) of a function explicitly, enabling greater control over its execution.
+
+```javascript
+const person = { firstName: 'John', lastName: 'Doe' }
+
+function greet(greeting, methodName) {
+  console.log(`${greeting} ${this.firstName} ${this.lastName}. ${methodName} method was used`)
+}
+
+greet.call(person, 'Hello', 'Call') //Hello John Doe. Call method was used
+```
+
+In the example above, we use the `call()` method to invoke the greet function with the `person` object as the context (`this`). The first argument passed to `call()` is the object that will be used as the `this` context within the function (`person` in this case). The subsequent arguments are the parameters expected by the function (`'Hello'` and `'Call'` in this case).
+
+### The apply() Method
+
+Similar to `call()`, the `apply()` method invokes a function with a specified `this` value, but it takes arguments as an array or array-like object. This makes it particularly useful when the number of arguments is variable or when arguments are already available in an array.
+
+```javascript
+const person = { firstName: 'John', lastName: 'Doe' }
+
+function greet(greeting, methodName) {
+  console.log(`${greeting} ${this.firstName} ${this.lastName}. ${methodName} method was used`)
+}
+
+greet.apply(person, ['Hi', 'Apply']) //Hi John Doe. Apply method was used
+```
+
+Here, we use the `apply()` method to invoke the greet function with the person object as the context (`this`). The first argument passed to `apply()` is the object that will be used as the `this` context within the function (`person` in this case). The second argument is an array containing the parameters expected by the function (`['Hi', 'Apply']` in this case).
+
+### The bind() Method
+
+Unlike `call()` and `apply()`, which immediately invoke the function, the `bind()` method creates a new function with a specified `this` value and optional arguments. This new function can be invoked later, maintaining the provided context.
+
+```javascript
+const person = { firstName: 'John', lastName: 'Doe' }
+
+function greet(greeting, methodName) {
+  console.log(`${greeting} ${this.firstName} ${this.lastName}. ${methodName} method was used`)
+}
+
+const greetJohn = greet.bind(person, 'Hello', 'Bind') //Hello John Doe. Bind method was used
+
+greetJohn()
+```
+
+This code snippet effectively creates a new function `greetJohn` where the context (`this`) is set to the `person` object and the `greeting` and `methodName` parameters are pre-filled with `'Hello'` and `'Bind'` respectively. When `greetJohn()` is called, it logs the message "Hello John Doe. Bind method was used". This demonstrates the usage of `bind()` to create a function with a fixed context and optionally pre-filled arguments, without immediate execution.
