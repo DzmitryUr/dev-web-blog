@@ -7,8 +7,9 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: 'Blog',
-    description: 'Web Development Blog',
+    title: 'Dev Web Blog',
+    description:
+      'My Web Development Blog about programming with JavaScript, HTML5, CSS3, React, and Next.js',
     //imgSrc: '/static/images/google.png',
     href: 'https://www.devweb.blog/',
   },
