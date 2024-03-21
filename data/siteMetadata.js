@@ -3,7 +3,8 @@ const siteMetadata = {
   title: 'Dev Web Blog',
   author: 'Dzmitry',
   headerTitle: 'DevWeb.Blog',
-  description: 'A blog about web development',
+  description:
+    'A blog about web development focusing on JavaScript, HTML5, CSS3, React, and Next.js',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://devweb.blog',
