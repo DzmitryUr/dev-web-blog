@@ -16,7 +16,7 @@ const siteMetadata = {
   github: 'https://github.com/DzmitryUr',
   twitter: 'https://twitter.com/Dzmitry713',
   //facebook: 'https://facebook.com',
-  //youtube: 'https://youtube.com',
+  youtube: 'https://www.youtube.com/@DevWebBlog',
   //linkedin: 'https://www.linkedin.com',
   //threads: 'https://www.threads.net',
   //instagram: 'https://www.instagram.com',
